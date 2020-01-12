@@ -893,8 +893,10 @@ body, html {
 }
 
 .section__text {
-  font-size: 15px;
-  color: #999;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 36px;
+  color: #7d7d7d;
 }
 
 .section .section__link {
