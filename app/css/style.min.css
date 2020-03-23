@@ -610,11 +610,10 @@ body, html {
   padding: 0;
 }
 
-/*
-.box-table {
-  max-width: 124rem;
-  margin: 4rem auto;
-}*/
+.table-wrap {
+  overflow: auto;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -1053,9 +1052,9 @@ body, html {
 
 .table {
   margin: auto;
-  min-width: 450px;
+  min-width: 900px;
   max-width: 1000px;
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
 }
 
@@ -1064,6 +1063,12 @@ body, html {
   border: 1px solid #3f51b5;
   text-align: center;
   vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .table td {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 920px) {

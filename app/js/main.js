@@ -1,3 +1,11 @@
+/*
+JQuery(document).ready(function($) {
+  JQuery(function($){
+    $('.table').stacktable();
+  })
+})
+*/
+
 // burger
 // при нажатие возникает меню с затеменнием в мобильной версии
 (()=> {
