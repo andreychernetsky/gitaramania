@@ -1053,7 +1053,7 @@ body, html {
 
 .table {
   width: 100%;
-  max-width: 124rem;
+  max-width: 100%;
   margin: auto;
   /* &__item:not([class]) {
     display: none;
@@ -1096,31 +1096,37 @@ th {
   font-size: 1.4rem;
   color: #c5c7c8;
   letter-spacing: 0.042rem;
+  border: 1px solid cyan;
 }
 
 td {
   font-size: 1.2rem;
   color: #7d7d7d;
+  border: 1px solid cyan;
 }
 
+/*
 @media (min-width: 880px) {
   .visible-lg {
     display: none;
   }
-  .table__list {
-    display: none;
+  .table{
+    &__list {
+      display: none;
+    }
   }
-}
 
+}
 @media (max-width: 779px) {
   .hidden-lg {
     display: none;
   }
-  .table__list {
-    display: block;
+  .table {
+    &__list {
+      display: block;
+    }
   }
-}
-
+}*/
 @media (max-width: 920px) {
   .main-header__phone {
     right: 20%;
