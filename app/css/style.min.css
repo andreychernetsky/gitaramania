@@ -1052,75 +1052,18 @@ body, html {
 }
 
 .table {
-  width: 100%;
-  max-width: 1160px;
   margin: auto;
-  /* &__item:not([class]) {
-    display: none;
-  }*/
+  min-width: 450px;
+  max-width: 1000px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.table__list {
-  list-style-type: none;
-}
-
-.table__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 1.2rem;
-}
-
-.table__th {
-  font-size: 1.3rem;
-  color: #c5c7c8;
-  letter-spacing: 0.042rem;
-  width: 22rem;
-}
-
-.table__td {
-  font-size: 1.3rem;
-  color: #766357;
-}
-
-th, td {
-  padding: 0.6rem;
-}
-
-th {
-  background-color: rgba(147, 149, 151, 0.08);
-  font-weight: 400;
-  font-size: 1.4rem;
-  color: #c5c7c8;
-  letter-spacing: 0.042rem;
-  border: 1px solid cyan;
-}
-
-td {
-  font-size: 1.2rem;
-  color: #7d7d7d;
-  border: 1px solid cyan;
-}
-
-@media (min-width: 880px) {
-  .visible-lg {
-    display: none;
-  }
-  .table__list {
-    display: none;
-  }
-}
-
-@media (max-width: 779px) {
-  .hidden-lg {
-    display: none;
-  }
-  .table__list {
-    display: block;
-  }
+.table td {
+  padding: 3px;
+  border: 1px solid #3f51b5;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media (max-width: 920px) {
