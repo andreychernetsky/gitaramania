@@ -610,6 +610,11 @@ body, html {
   padding: 0;
 }
 
+/*
+.box-table {
+  max-width: 124rem;
+  margin: 4rem auto;
+}*/
 .container {
   width: 100%;
   max-width: 1170px;
@@ -1044,6 +1049,76 @@ body, html {
 
 .topButton__show {
   display: block;
+}
+
+.table {
+  width: 100%;
+  max-width: 124rem;
+  margin: auto;
+  /* &__item:not([class]) {
+    display: none;
+  }*/
+}
+
+.table__list {
+  list-style-type: none;
+}
+
+.table__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.table__th {
+  font-size: 1.3rem;
+  color: #c5c7c8;
+  letter-spacing: 0.042rem;
+  width: 22rem;
+}
+
+.table__td {
+  font-size: 1.3rem;
+  color: #766357;
+}
+
+th, td {
+  padding: 0.6rem;
+}
+
+th {
+  background-color: rgba(147, 149, 151, 0.08);
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #c5c7c8;
+  letter-spacing: 0.042rem;
+}
+
+td {
+  font-size: 1.2rem;
+  color: #7d7d7d;
+}
+
+@media (min-width: 880px) {
+  .visible-lg {
+    display: none;
+  }
+  .table__list {
+    display: none;
+  }
+}
+
+@media (max-width: 779px) {
+  .hidden-lg {
+    display: none;
+  }
+  .table__list {
+    display: block;
+  }
 }
 
 @media (max-width: 920px) {
