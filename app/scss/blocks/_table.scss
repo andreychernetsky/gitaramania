@@ -1,6 +1,6 @@
 .table {
   width: 100%;
-  max-width:100%;
+  max-width:1160px;
   margin: auto;
   &__list {
     list-style-type: none;
@@ -48,7 +48,7 @@ td {
 }
 
 
-/*
+
 @media (min-width: 880px) {
   .visible-lg {
     display: none;
@@ -69,4 +69,4 @@ td {
       display: block;
     }
   }
-}*/
+}

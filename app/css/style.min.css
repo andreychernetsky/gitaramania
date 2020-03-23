@@ -1053,7 +1053,7 @@ body, html {
 
 .table {
   width: 100%;
-  max-width: 100%;
+  max-width: 1160px;
   margin: auto;
   /* &__item:not([class]) {
     display: none;
@@ -1105,28 +1105,24 @@ td {
   border: 1px solid cyan;
 }
 
-/*
 @media (min-width: 880px) {
   .visible-lg {
     display: none;
   }
-  .table{
-    &__list {
-      display: none;
-    }
+  .table__list {
+    display: none;
   }
-
 }
+
 @media (max-width: 779px) {
   .hidden-lg {
     display: none;
   }
-  .table {
-    &__list {
-      display: block;
-    }
+  .table__list {
+    display: block;
   }
-}*/
+}
+
 @media (max-width: 920px) {
   .main-header__phone {
     right: 20%;
