@@ -1,20 +1,45 @@
 .table {
+  border: 1px solid #ccc;
   margin: auto;
   min-width: 900px;
   max-width: 1000px;
-  width: 90%;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
+  &__link {
+    text-transform: none;
+    color: green;
+    &:hover {
+      color: #7e47bb;
+    }
+
+  }
+
 }
+
+.table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
 .table td {
-  padding: 3px;
-  border: 1px solid #3f51b5;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
   text-align: center;
   vertical-align: middle;
 }
 
-@media (max-width:600px){
-.table td{
-  font-size:0.8rem;
+.table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
+
+@media (max-width: 600px) {
+  .table td {
+    font-size: 0.8rem;
+  }
 
 }
