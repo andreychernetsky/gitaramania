@@ -1095,6 +1095,19 @@ body, html {
   }
 }
 
+.art {
+  margin: auto;
+  width: 90%;
+  padding: 25px  0;
+}
+
+.art__item {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 36px;
+  color: #7d7d7d;
+}
+
 @media (max-width: 920px) {
   .main-header__phone {
     right: 20%;
