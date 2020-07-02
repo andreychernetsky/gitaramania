@@ -1108,6 +1108,67 @@ body, html {
   color: #7d7d7d;
 }
 
+.video {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.video__wrapp {
+  display: block;
+  width: 20%;
+  margin: 0 3px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.video__item {
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 684px) {
+  .video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .video__wrapp {
+    display: block;
+    width: 100%;
+    margin: 4% 1%;
+  }
+}
+
 @media (max-width: 920px) {
   .main-header__phone {
     right: 20%;
