@@ -159,8 +159,8 @@ btn.addEventListener('click',function () {
   'use strict';
 
   function trackScroll() {
-    var scrolled = window.pageYOffset;
-    var coords = document.documentElement.clientHeight;
+    let scrolled = window.pageYOffset;
+    let coords = document.documentElement.clientHeight;
 
     if (scrolled > coords) {
       goTopBtn.classList.add('topButton__show');
@@ -177,7 +177,7 @@ btn.addEventListener('click',function () {
     }
   }
 
-  var goTopBtn = document.querySelector('.topButton');
+  const goTopBtn = document.querySelector('.topButton');
 
   window.addEventListener('scroll', trackScroll);
   goTopBtn.addEventListener('click', backToTop);
@@ -191,3 +191,32 @@ btn.addEventListener('click',function () {
   };
   document.getElementById('btn').addEventListener('click', burger);
 })();
+
+
+//accordion2
+(()=>{
+  const accordionButtons = document.querySelectorAll('.js-title');//1
+  accordionButtons.forEach(btn => btn.addEventListener('click', () => {//2
+    const isOpen = btn.nextElementSibling.classList.contains('accordion__copy--open');//7
+    if (isOpen) {
+      closeAccordionItem(btn.nextElementSibling);
+    } else {
+      accordionButtons.forEach(x => closeAccordionItem(x.nextElementSibling));//6
+      openAccordionItem(btn.nextElementSibling)//5
+    }
+  }));
+
+  function openAccordionItem(item) {//3
+    item.classList.add('accordion__copy--open');
+    item.style.maxHeight = item.scrollHeight + "px";
+    item.style.padding = "1rem 1.5rem 2rem 1.5rem";
+  }
+
+  function closeAccordionItem(item) {//4
+    item.classList.remove('accordion__copy--open');
+    item.style.maxHeight = 0;
+    item.style.padding = "0 1.5rem 0 1.5rem";
+  }
+
+
+})()
