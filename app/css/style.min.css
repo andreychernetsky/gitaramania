@@ -1052,7 +1052,6 @@ body, html {
 .accordion {
   width: 100%;
   background: #fff;
-  border: 1px solid #303030;
   text-align: left;
 }
 
@@ -1084,9 +1083,9 @@ body, html {
   font-size: 1rem;
   font-weight: 500;
   min-height: 0;
-  -webkit-transition: padding 0.5s;
-  -o-transition: padding 0.5s;
-  transition: padding 0.5s;
+  -webkit-transition: padding 0.5s, max-height 0.5s;
+  -o-transition: padding 0.5s, max-height 0.5s;
+  transition: padding 0.5s, max-height 0.5s;
 }
 
 @media (min-width: 540px) {
@@ -1096,6 +1095,21 @@ body, html {
   .accordion__copy-pic {
     width: 180px;
   }
+}
+
+#test {
+  z-index: 100;
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+
+.correct {
+  border: 1px solid red;
+}
+
+.incorrect {
+  border: 1px solid green;
 }
 
 .topButton {

@@ -23,7 +23,7 @@
 .accordion {
   width: 100%;
   background: #fff;
-  border: 1px solid #303030;
+  //border: 1px solid #303030;
   text-align: left;
   &__title {
     font-size: 1.1rem;
@@ -50,7 +50,7 @@
     font-size: 1rem;
     font-weight: 500;
     min-height: 0;
-    transition: padding 0.5s;
+    transition: padding 0.5s, max-height 0.5s;
 
   }
 }
@@ -62,4 +62,18 @@
   .accordion__copy-pic {
     width: 180px;
   }
+}
+
+
+#test {
+  z-index: 100;
+  width: 100%;
+  margin:auto;
+  height:auto;
+}
+.correct {
+  border:1px solid red;
+}
+.incorrect {
+  border:1px solid green;
 }
