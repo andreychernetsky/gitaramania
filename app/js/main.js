@@ -187,7 +187,7 @@ JQuery(document).ready(function($) {
 
 // викторина
 (() => {
-  const test = document.getElementById('test');
+  const test = document.querySelector('test');
   const questions = [{
     text: 'Сколько нот в музыке?',
     right: 'семь'

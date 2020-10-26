@@ -1,0 +1,33 @@
+.team {
+  margin:100px 0 70px;
+  &__inner {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin: 0 15px;
+  }
+  &__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom:30px;
+  }
+  &__img {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width:927px ) {
+  .team__inner {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .team__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
