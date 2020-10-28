@@ -159,6 +159,7 @@ JQuery(document).ready(function($) {
   };
   document.getElementById('btn').addEventListener('click', burger);
 })();
+
 //accordion2
 (() => {
   const accordionButtons = document.querySelectorAll('.js-title');//1

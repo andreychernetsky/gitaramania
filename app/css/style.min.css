@@ -1031,14 +1031,14 @@ body, html {
 }
 
 .wrap-container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   background: transparent;
   text-align: center;
 }
 
 .wrap-container__head {
-  color: #000;
+  color: #000000;
   text-align: center;
 }
 
@@ -1046,7 +1046,7 @@ body, html {
   margin: 1rem 0 0 0;
 }
 
-.wrap-container__link:link, .wrap-container__link:visited {
+.wrap-container__link, .wrap-container__link:visited {
   color: #520611;
   font-size: 1.3rem;
 }
@@ -1071,22 +1071,29 @@ body, html {
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;
   transition: .3s ease;
-  border: 0 none;
-  border-bottom: 1px solid #555;
   width: 100%;
   text-align: center;
 }
 
-.accordion__title:hover, .accordion__title:focus {
+.accordion__title__title:hover, .accordion__title__accordion__title:focus {
   background: #000;
 }
 
 .accordion__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   padding: 0 1.5rem 0 1.5rem;
   color: #666;
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.6rem;
   font-weight: 500;
   min-height: 0;
   -webkit-transition: padding 0.5s, max-height 0.5s;
@@ -1094,28 +1101,18 @@ body, html {
   transition: padding 0.5s, max-height 0.5s;
 }
 
-@media (min-width: 540px) {
-  .wrap-container__head {
-    font-size: 2rem;
-  }
-  .accordion__copy-pic {
-    width: 180px;
-  }
+.accordion__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#test {
-  z-index: 100;
-  width: 100%;
-  margin: auto;
-  height: auto;
-}
-
-.correct {
-  border: 1px solid red;
-}
-
-.incorrect {
-  border: 1px solid green;
+.accordion__text {
+  padding: 10px;
+  text-align: center;
 }
 
 .topButton {
