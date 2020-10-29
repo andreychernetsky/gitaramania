@@ -182,7 +182,7 @@ JQuery(document).ready(function($) {
   function closeAccordionItem(item) {//4
     item.classList.remove('accordion__copy--open');
     item.style.maxHeight = 0;
-    item.style.padding = "0 1.5rem 0 1.5rem";
+    item.style.padding = "0";
   }
 })()
 
