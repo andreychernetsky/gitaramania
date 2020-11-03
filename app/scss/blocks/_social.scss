@@ -17,3 +17,24 @@
     }
   }
 }
+
+//icon для футера
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 4px;
+  }
+  &__icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    fill: #ffc222;
+    display: block;
+  }
+}

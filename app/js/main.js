@@ -159,12 +159,85 @@ JQuery(document).ready(function($) {
   };
   document.getElementById('btn').addEventListener('click', burger);
 })();
-
 //accordion2
-(() => {
-  const accordionButtons = document.querySelectorAll('.js-title');//1
+
+
+
+/*
+// викторина 2
+const option1 = document.querySelector('.option1');
+option2 = document.querySelector('.option2');
+option3 = document.querySelector('.option3');
+option4 = document.querySelector('.option4');
+
+const optionElements = document.querySelectorAll('.option');
+const question = document.getElementById('number-of-question'),
+  numberOfAllQuestion = document.getElementById('number-of-all-questions');
+
+let indexOfQuestion,
+  indexOfPage = 0;
+
+const answersTracker = document.getElementById('answers-tracker');
+const btnNext = document.getElementById('btn-next');
+
+let score = 0;
+
+const correctAnswer = document.getElementById('correct-answer'),
+  numberOfAllQuestion2 = document.getElementById('number-of-all-questions-2'),
+  btnTruAgain = document.getElementById('btn-try-again');
+
+const questions = [
+  {
+    question:'Сколько нот в музыке?',
+    options:[
+      'восемь',
+      'семь',
+      '12',
+      '6'
+    ],
+
+    rightAnswer:1
+  },
+  {
+    question:'Сколько ступеней в музыке?',
+    options:[
+      'восемь',
+      'семь',
+      '12',
+      '6'
+    ],
+
+    rightAnswer:1
+  },
+  {
+    question:'как назвается треться нота в C-dur?',
+    options:[
+      'фа',
+      'соль',
+      'ми',
+      '6'
+    ],
+
+    rightAnswer:2
+  }
+];
+
+numberOfAllQuestion.innerHtml = questions.length;
+
+const load =()=>{
+  question.innerHTML = questions[0].question;
+
+}
+
+window.addEventListener('liad',()=>{
+  load()
+})
+
+*/
+{
+  const accordionButtons = document.querySelectorAll('.accordion__button');//1
   accordionButtons.forEach(btn => btn.addEventListener('click', () => {//2
-    const isOpen = btn.nextElementSibling.classList.contains('accordion__copy--open');//7
+    const isOpen = btn.nextElementSibling.classList.contains('accordion__panel--open');//7
     if (isOpen) {
       closeAccordionItem(btn.nextElementSibling);
     } else {
@@ -174,56 +247,14 @@ JQuery(document).ready(function($) {
   }));
 
   function openAccordionItem(item) {//3
-    item.classList.add('accordion__copy--open');
+    item.classList.add('accordion__panel--open');
     item.style.maxHeight = item.scrollHeight + "px";
     item.style.padding = "1rem 1.5rem 2rem 1.5rem";
   }
 
   function closeAccordionItem(item) {//4
-    item.classList.remove('accordion__copy--open');
+    item.classList.remove('accordion__panel--open');
     item.style.maxHeight = 0;
-    item.style.padding = "0";
+    item.style.padding = "0 1.5rem 0 1.5rem";
   }
-})()
-
-// викторина
-(() => {
-  const test = document.querySelector('test');
-  const questions = [{
-    text: 'Сколько нот в музыке?',
-    right: 'семь'
-  },
-    {
-      text: 'Сколько нот в музыке?',
-      right: 'семь',
-    },
-    {
-      text: 'Сколько нот в музыке?',
-      right: 'семь'
-    }
-  ];
-  for (const question of questions) {
-    const div = document.createElement('div');
-    test.append('div');
-    const p = document.createElement('p');
-    p.textContent = question.text;
-    const input = document.createElement('input');
-    input.dataset.right = question.right;
-    div.append(p, input);
-  }
-  const button = document.getElementById('btn');
-  button.addEventListener('click', () => {
-    const inputs = document.querySelectorAll('input');
-    for(const inp of inputs) {
-      inp.classList.remove('.incorrect');
-      inp.classList.remove('.correct');
-
-      if(inp.value === inp.dataset.right) {
-        inp.classList.add('.correct')
-      } else {
-          inp.classList.add('.incorrect');
-        }
-    }
-  })
-})
-();
+}
