@@ -246,15 +246,17 @@ window.addEventListener('liad',()=>{
     }
   }));
 
+  function closeAccordionItem(item) {//4
+    item.classList.remove('accordion__panel--open');
+    item.style.maxHeight = 0;
+    item.style.padding = "0 1.5rem 0 1.5rem";
+  }
+
   function openAccordionItem(item) {//3
     item.classList.add('accordion__panel--open');
     item.style.maxHeight = item.scrollHeight + "px";
     item.style.padding = "1rem 1.5rem 2rem 1.5rem";
   }
 
-  function closeAccordionItem(item) {//4
-    item.classList.remove('accordion__panel--open');
-    item.style.maxHeight = 0;
-    item.style.padding = "0 1.5rem 0 1.5rem";
-  }
+
 }
