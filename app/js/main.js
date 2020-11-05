@@ -250,7 +250,7 @@ window.addEventListener('liad',()=>{
   function openAcc(item) {
     item.classList.add('accordion__panel--open');
     item.style.maxHeight = item.scrollHeight+'px';
-    item.style.padding = '1.rem 1.5rem 1rem 1.5rem'
+    item.style.padding = '1rem auto'
   }
 
   function closeAcc(item) {
