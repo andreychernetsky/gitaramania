@@ -1,9 +1,13 @@
 .accordion2 {
-  width: 900px;
-  max-width: 100%;
-  margin: 0 auto;
-  background: transparent;
-  text-align: center;
+  width: 100%;
+  &__inner {
+    padding-top: 30px;
+
+    max-width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    text-align: center;
+  }
   &__button {
    /* первы вариант оформления
    font-size: 1.1rem;
