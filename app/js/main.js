@@ -235,28 +235,32 @@ window.addEventListener('liad',()=>{
 
 */
 {
-  const accordionButtons = document.querySelectorAll('.accordion__button');//1
-  accordionButtons.forEach(btn => btn.addEventListener('click', () => {//2
-    const isOpen = btn.nextElementSibling.classList.contains('accordion__panel--open');//7
-    if (isOpen) {
-      closeAccordionItem(btn.nextElementSibling);
+ {
+  const accButton = document.querySelectorAll('.accordion2__button');
+  accButton.forEach(btn => btn.addEventListener('click',()=>{
+    const openButton = btn.nextElementSibling.classList.contains('accordion__panel--open');
+    if(openButton) {
+      closeAcc(btn.nextElementSibling);
     } else {
-      accordionButtons.forEach(x => closeAccordionItem(x.nextElementSibling));//6
-      openAccordionItem(btn.nextElementSibling)//5
+      accButton.forEach(x=>closeAcc(x.nextElementSibling));
+      openAcc(btn.nextElementSibling);
     }
-  }));
+  }))
 
-  function closeAccordionItem(item) {//4
-    item.classList.remove('accordion__panel--open');
-    item.style.maxHeight = 0;
-    item.style.padding = "0 1.5rem 0 1.5rem";
-  }
-
-  function openAccordionItem(item) {//3
+  function openAcc(item) {
     item.classList.add('accordion__panel--open');
-    item.style.maxHeight = item.scrollHeight + "px";
-    item.style.padding = "1rem 1.5rem 2rem 1.5rem";
+    item.style.maxHeight = item.scrollHeight+'px';
+    item.style.padding = '1.rem 1.5rem 1rem 1.5rem'
   }
+
+  function closeAcc(item) {
+    item.classList.remove('accordion__panel--open');
+    item.style.maxHeight = '0';
+    item.style.paddin = '0 1.5rem 0 1.5rem';
+  }
+
+
+}
 
 
 }
