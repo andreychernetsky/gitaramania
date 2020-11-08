@@ -98,8 +98,8 @@ JQuery(document).ready(function($) {
 //         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
 //     }
 // }
-  const anchors = document.querySelectorAll('a[href*="#"]')
-  for (let anchor of anchors) {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+  for (const anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const blockID = anchor.getAttribute('href');
