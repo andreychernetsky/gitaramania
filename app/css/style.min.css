@@ -899,6 +899,9 @@ body, html {
   margin: 10px auto;
   padding: 0 15px;
   background-color: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  text-align: center;
 }
 
 .section {
@@ -1220,6 +1223,56 @@ body, html {
 .accordion3 .accordion3__button.active:after {
   border-bottom: 12px solid #fff;
   top: -5px;
+}
+
+.quiz {
+  margin: 30px auto;
+  width: 600px;
+  max-width: 100%;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  text-align: center;
+}
+
+.quiz__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quiz__test div {
+  margin: 15px auto;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.quiz__btn {
+  margin-top: 20px;
+  width: auto;
+  color: #fff;
+  background-color: darkcyan;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.quiz__correct {
+  border: 1px solid green;
+}
+
+.quiz__incorrect {
+  border: 1px solid red;
 }
 
 .topButton {

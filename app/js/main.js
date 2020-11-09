@@ -26,7 +26,7 @@ JQuery(document).ready(function($) {
   }
 })();
 // прокрутка по якорям
-(() => {
+
   // // собираем все якоря; устанавливаем время анимации и количество кадров
 // const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
 //       animationTime = 300,
@@ -98,18 +98,19 @@ JQuery(document).ready(function($) {
 //         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
 //     }
 // }
-  const anchors = document.querySelectorAll('a[href*="#"]');
-  for (const anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const blockID = anchor.getAttribute('href');
-      document.querySelector('' + blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+  {
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    for (const anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
       })
-    })
+    }
   }
-})();
 (() => {
 })();
 //кнопка на вверх
@@ -234,7 +235,7 @@ window.addEventListener('liad',()=>{
 })
 
 */
-{
+
  {
   const accButton = document.querySelectorAll('.accordion2__button');
   accButton.forEach(btn => btn.addEventListener('click',()=>{
@@ -260,7 +261,94 @@ window.addEventListener('liad',()=>{
   }
 
 
-}
+ }
 
+ // викторина
+const test = document.querySelector('.quiz__test');
+//console.log(test);
 
+const questions = [
+  {
+    text:' Сколько ступеней в До мажоре?',
+    right:7
+  },
+  {
+    text:' Сколько нот в музыке?',
+    right:7
+  },
+  {
+    text:' Назови цифровкай третью ноту в тональности До- мажор',
+    right:'ми'
+  },
+  {
+    text:' Какая нота в размере четырех четвертей имеет удар по струне на 1и ?',
+    right:'четвертная'
+  },
+  {
+    text:' Какая нота пишется между четвертой и пятой линейкой?',
+    right:'ми'
+  },
+  {
+    text:'Какая нота в размере четырех четвертей имеет удар по струне на 1и 2и ?',
+    right:'половинная'
+  },
+  {
+    text:'Какая нота пишется на третьей линейке?',
+    right:'си'
+  },
+  {
+    text:'что означает цифра в кружечке?',
+    right:'номер струны'
+  },
+  {
+    text:'Какая нота в размере четырех четвертей имеет удар по струне на 1и?',
+    right:'четвертная'
+  },
+  {
+    text:'Какая нота в размере четырех четвертей имеет удар по струне на 1и 2и 3и?',
+    right:'половинная с точкой'
+
+  }
+];
+
+for(const question of questions) {
+// console.log(question);
+  const div = document.createElement('div');
+//	console.log(div);
+  test.append(div);
+//	console.log(test);
+  const p = document.createElement('p');
+//	 console.log(p);
+  p.textContent = question.text;
+
+//	console.log(p);
+  const input = document.createElement('input');
+//	console.log(input);
+  input.dataset.right = question.right;
+//	console.log(input);
+  div.append(p,input);
+//	console.log(div);
 }
+const button = document.querySelector('#clickBtn');
+button.addEventListener('click',()=>{
+  const inputs = document.querySelectorAll('.quiz__test input');
+let wrongCounter = 0;
+  for(const inp of inputs) {
+//  console.log(inp);
+    inp.classList.remove('quiz__correct');
+    inp.classList.remove('quiz__incorrect');
+    if(inp.value === inp.dataset.right) {
+      inp.classList.add('quiz__correct');
+    } else {
+      inp.classList.add('quiz__incorrect');
+      wrongCounter++;
+    }
+  }
+  if(wrongCounter>0) {
+    button.textContent = `осталось ответить на ${wrongCounter} вопросов`
+  } else {
+    button.texConten = `Вы ответили на все вопросы`;
+button.disabled = true;
+  }
+});
+//console.log(button);
