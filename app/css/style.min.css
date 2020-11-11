@@ -615,16 +615,6 @@ body, html {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 1100px;
   max-width: 100%;
   padding: 15px;
@@ -1521,22 +1511,53 @@ body, html {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   color: #333;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.footer__info, .footer__schedule, .footer__map {
+.footer__info, .footer__schedule, .footer__social {
   width: 33%;
   padding: 15px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.footer__map {
-  padding-top: 10px;
-  max-width: 100%;
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.footer__map iframe {
-  width: 100%;
+.footer__icon-vk {
+  width: 45px;
+  height: 45px;
+  fill: #ffc222;
+  display: block;
+}
+
+.footer__icon-youtube {
+  width: 45px;
+  height: 45px;
+  fill: #ffc222;
+  display: block;
+}
+
+.footer__vicon-vk:hover {
+  fill: #233a80;
+}
+
+.footer__icon-youtube:hover {
+  fill: #a51416;
 }
 
 .footer__info {
@@ -1615,6 +1636,7 @@ body, html {
 
 .footer__copy {
   background-color: #303030;
+  color: #ffc107;
   text-align: center;
   font-size: 12px;
   line-height: 20px;
@@ -1636,7 +1658,7 @@ body, html {
         -ms-flex-align: center;
             align-items: center;
   }
-  .footer__info, .footer__schedule, .footer__map {
+  .footer__info, .footer__schedule, .footer__social {
     width: 100%;
   }
 }
