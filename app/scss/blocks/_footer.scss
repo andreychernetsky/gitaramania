@@ -24,7 +24,7 @@
   &__schedule,
   &__social {
     width: 33%;
-    padding: 15px;
+    padding: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;
   }
 
@@ -40,6 +40,9 @@
     height: 45px;
     fill: #ffc222;
     display: block;
+     &:hover {
+      fill: #233a80;
+    }
   }
 
   &__icon-youtube {
@@ -49,11 +52,6 @@
     display: block;
   }
 
-  &__vicon-vk {
-    &:hover {
-      fill: #233a80;
-    }
-  }
     &__icon-youtube {
       &:hover {
         fill: #a51416;

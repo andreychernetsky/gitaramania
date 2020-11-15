@@ -257,7 +257,7 @@ window.addEventListener('liad',()=>{
   function closeAcc(item) {
     item.classList.remove('accordion__panel--open');
     item.style.maxHeight = '0';
-    item.style.paddin = '0 1.5rem 0 1.5rem';
+    item.style.padding = '0 1.5rem 0 1.5rem';
   }
 
 

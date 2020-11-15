@@ -1517,7 +1517,7 @@ body, html {
 
 .footer__info, .footer__schedule, .footer__social {
   width: 33%;
-  padding: 15px;
+  padding: 5px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
@@ -1545,15 +1545,15 @@ body, html {
   display: block;
 }
 
+.footer__icon-vk:hover {
+  fill: #233a80;
+}
+
 .footer__icon-youtube {
   width: 45px;
   height: 45px;
   fill: #ffc222;
   display: block;
-}
-
-.footer__vicon-vk:hover {
-  fill: #233a80;
 }
 
 .footer__icon-youtube:hover {
