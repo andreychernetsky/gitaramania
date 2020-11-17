@@ -1,6 +1,7 @@
 .news {
-  padding: 55px 0px 110px;
+  padding: 55px 0 46px;
   background-color: #f9f9f9;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;
   &__top {
     display: flex;
     justify-content: space-between;
@@ -10,7 +11,7 @@
     max-width: 520px;
     padding-left: 140px;
     position: relative;
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       width: 100px;
@@ -29,12 +30,20 @@
     margin-bottom: 10px;
   }
   &__btn-link {
-      color: #373636;
-      line-height: 24px;
-      letter-spacing: 0.25px;
-      padding: 5px 38px;
-      border: 3px solid #e6e6e6;
+    display: inline-block;
+    color: #373636;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    padding: 5px 38px;
+    border: 3px solid #e6e6e6;
+    background: #ffc222;
+    border-radius: 5%;
+    text-decoration: none;
+    &:hover {
+      background: #b523a3;
     }
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -65,7 +74,7 @@
   &__slide {
     display: none;
     position: relative;
-    padding: 50px 5px;
+    padding: 50px 10px;
   }
   &__slide.active {
     animation: fade linear 1.5s;
@@ -120,7 +129,7 @@
   }
 
   &__blog {
-    width:50%;
+    width: 50%;
     //max-width: 260px;
     display: flex;
     justify-content: space-between;
@@ -130,9 +139,9 @@
     text-decoration: none;
     display: inline-block;
   }
-&__wrap{
-  position: relative;
-}
+  &__wrap {
+    position: relative;
+  }
   &__images {
     max-width: 100%;
     width: 400px;
@@ -158,11 +167,10 @@
     padding: 12px 0;
   }
   &__blog-text {
-      letter-spacing: 0.1px;
-      color: #5e5e5e;
-    }
+    letter-spacing: 0.1px;
+    color: #5e5e5e;
   }
-
+}
 
 @keyframes fade {
   from {
@@ -175,6 +183,15 @@
 
 @media (max-width: 989px) {
   .news {
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__btn {
+      padding-top: 20px;
+      width: 100%;
+    }
     &__inner {
       display: flex;
       flex-direction: column;
@@ -186,7 +203,7 @@
 
     }
     &__blog {
-     padding-top: 20px;
+      padding-top: 20px;
 
     }
   }
