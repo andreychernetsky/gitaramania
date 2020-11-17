@@ -1520,19 +1520,25 @@ body, html {
 
 .news__title {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
   color: #212020;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 10px;
 }
 
+.news__text {
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: inherit;
+}
+
 .news__btn-link {
   display: inline-block;
+  height: 40px;
   color: #373636;
-  line-height: 24px;
   letter-spacing: 0.25px;
-  padding: 5px 38px;
+  padding: 5px 27px;
   border: 3px solid #e6e6e6;
   background: #ffc222;
   border-radius: 5%;
@@ -1541,6 +1547,9 @@ body, html {
 
 .news__btn-link:hover {
   background: #b523a3;
+  -webkit-animation: fade linear 1.5s;
+          animation: fade linear 1.5s;
+  color: #fff;
 }
 
 .news__inner {
@@ -1554,11 +1563,10 @@ body, html {
 
 .news__slideshow {
   max-width: 555px;
-  width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
-          box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
-  padding: 60px 35px 45px 70px;
+  -webkit-box-shadow: 0 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+          box-shadow: 0 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+  padding: 60px 49px 45px 52px;
   position: relative;
 }
 
@@ -1570,7 +1578,6 @@ body, html {
   color: #fff;
   font-size: 16px;
   width: 65px;
-  height: 30px;
   text-align: center;
   line-height: 30px;
   background-color: #ffc222;
@@ -1579,7 +1586,7 @@ body, html {
 .news__slide {
   display: none;
   position: relative;
-  padding: 50px 10px;
+  padding: 5px;
 }
 
 .news__slide.active {
@@ -1592,7 +1599,7 @@ body, html {
   font-size: 18px;
   line-height: 24px;
   color: #242424;
-  font-weight: 500;
+  font-weight: 600;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
   margin-bottom: 15px;
@@ -1600,13 +1607,21 @@ body, html {
 
 .news__descr {
   margin-bottom: 30px;
+  padding: 0 15px;
 }
 
-.news__slider-link {
+.news__slide-link {
   letter-spacing: 0.1px;
-  color: #212020;
-  font-weight: 500;
+  color: #233a80;
+  font-weight: 600;
   font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.news__slide-link:hover {
+  color: #7e47bb;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
 }
 
 .news__slide-img {
