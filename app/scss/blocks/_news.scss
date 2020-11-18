@@ -246,6 +246,14 @@
     &__slide-link {
 
     }
+    &__blog {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .news__wrap {
+      width: 100%;
+    }
   }
 
 
