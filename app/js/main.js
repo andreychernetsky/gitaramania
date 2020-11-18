@@ -369,8 +369,7 @@ button.disabled = true;
 
     setActiveSlide() {
       this.slides.forEach((item, index) => {
-        if (index === this.currentIndex
-        ) {
+        if (index === this.currentIndex) {
           item.classList.add('active');
         }
         else {
@@ -382,8 +381,7 @@ button.disabled = true;
     next() {
       let nextBtn = this.element.querySelector('[data-way="next"]');
       nextBtn.addEventListener('click', () => {
-        if (this.currentIndex === this.slides.length - 1
-        ) {
+        if (this.currentIndex === this.slides.length - 1) {
           this.currentIndex = 0;
         }
         else {
