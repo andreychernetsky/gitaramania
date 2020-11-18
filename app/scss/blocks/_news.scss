@@ -78,7 +78,6 @@
 
   &__slide {
     display: none;
-    position: relative;
     padding: 5px
   }
   &__slide.active {
@@ -95,7 +94,7 @@
     margin-bottom: 15px;
   }
   &__descr {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: 0 15px;
   }
   &__slide-link {
@@ -194,6 +193,9 @@
 
 @media (max-width: 989px) {
   .news {
+    &__title-box {
+      padding-left: 5px;
+    }
     &__top {
       display: flex;
       flex-direction: column;
@@ -220,7 +222,35 @@
   }
 }
 
+@media(max-width: 610px){
+  .news {
+    &__text {
+      font-size: 15px;
+    }
 
+    &__nav {
+      top: 40px;
+    }
+    &__nav--prev {
+      right: 10px;
+      left: auto;
+    }
+    &__nav--next {
+      right: 70px;
+    }
+    &__descr {
+      padding: 0;
+      font-size:15px;
+      margin-bottom: 15px;
+    }
+    &__slide-link {
+
+    }
+  }
+
+
+
+}
 
 
 
